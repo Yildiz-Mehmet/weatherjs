@@ -29,6 +29,10 @@ const getWeatherData = async (cityValue) => {
       `Humidity: ${data.main.humidity}`,
       `Wind speed: ${data.wind.speed}`,
     ];
+    weatherDataEl.querySelector(".icon").innerHTML = `<img
+    src="http://openweathermap.org/img/wn/${icon}.png"
+    alt="Weather Icon"
+  />`;
   } catch (error) {
     console.log(error);
   }
